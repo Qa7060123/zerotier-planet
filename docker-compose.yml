@@ -13,10 +13,10 @@ services:
             - HTTP_ALL_INTERFACES=yes
             - ZTNCUI_PASSWD=admin
         ports:
-            - '6001:4000' # web控制台入口
-            - '6003:6003' # zerotier服务端口
-            - '6003:6003/udp'
-            - '6002:3180' # planet/moon文件在线下载入口，如不对外提供。可防火墙禁用此端口。
+            - '4000:4000' # web控制台入口
+            - '9994:9994' # zerotier服务端口
+            - '9994:9994/udp'
+            - '3180:3180' # planet/moon文件在线下载入口，如不对外提供。可防火墙禁用此端口。
         volumes:
             - './zerotier-one:/var/lib/zerotier-one'
             - './ztncui/etc:/opt/key-networks/ztncui/etc'
